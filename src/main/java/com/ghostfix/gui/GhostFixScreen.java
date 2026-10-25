@@ -40,10 +40,10 @@ public class GhostFixScreen extends Screen {
 
 		int y = top + 10;
 
-		TextWidget title = new TextWidget(INNER_W, 12,
-				Text.literal("Ghostfix").formatted(Formatting.BOLD, Formatting.AQUA), this.textRenderer);
-		title.setPosition(x, y);
-		title.alignCenter();
+		Text titleText = Text.literal("Ghostfix").formatted(Formatting.BOLD, Formatting.AQUA);
+		int titleW = this.textRenderer.getWidth(titleText);
+		TextWidget title = new TextWidget(titleW, 12, titleText, this.textRenderer);
+		title.setPosition(x + (INNER_W - titleW) / 2, y);
 		this.addDrawableChild(title);
 		y += 20;
 
