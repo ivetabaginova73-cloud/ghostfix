@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "id": "ghostfix",
+  "version": "${version}",
+  "name": "Ghostfix",
+  "description": "Reduces ghost hits when chasing targets (including mid-air) by buffering missed attack clicks for a couple of ticks. Includes a clean settings screen.",
+  "authors": ["You"],
+  "license": "MIT",
+  "environment": "client",
+  "entrypoints": {
+    "client": ["com.ghostfix.GhostFixClient"]
+  },
+  "mixins": ["ghostfix.mixins.json"],
+  "depends": {
+    "fabricloader": ">=0.18.0",
+    "minecraft": "~1.21.11",
+    "java": ">=21",
+    "fabric-api": "*"
+  }
+}
